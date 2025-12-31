@@ -12,6 +12,9 @@
 #{c(shop featured)} {
   background: transparent;
 }
+#{c(shop divider)} {
+  margin-top: 0;
+}
 
 // CARD
 #{c(shop card)} {
@@ -21,22 +24,33 @@
     border-color: cv('color.main');
   }
 }
-#{c(shop cardText)} {
-  background: transparent;
-  border: none;
-}
 
 // LOADING
 #{c(shop loadingCardSkeleton)},
 #{c(shop loadingFeaturedSkeleton)} {
+  background: cv('shading.card');
+}
+#{c(main options fullMotion)} {
+  #{c(shop loadingCardSkeletonAnimation)},
+  #{c(shop loadingFeaturedSkeleton)} {
+    animation: cv-card-loading 1.5s infinite ease-in-out;
+  }
+}
+#{c(shop loadingCardText)},
+#{c(shop loadingFeaturedLogo)} {
   background: cv('shading.cardAlt');
 }
-#{c(shop loadingCardBody)},
-#{c(shop loadingFeaturedBody)} {
-  background: cv('shading.cardAlt');
-}
-#{c(shop loadingCardContent)} {
+
+// FILTER
+#{c(shop filterBar)} {
   background: transparent;
+}
+#{c(shop filterColorToggled)} {
+  outline-color: cv('color.main');
+}
+#{c(shop filterThemeToggled)} {
+  background: cv('shading.card');
+  border-color: cv('color.main');
 }
 
 // PREVIEW
